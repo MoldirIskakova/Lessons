@@ -8,7 +8,7 @@ import (
 const Pi = 3.1415
 
 func main() {
-	printCircleArea(-2)
+	printCircleArea(2)
 }
 
 func printCircleArea(radius int) {
