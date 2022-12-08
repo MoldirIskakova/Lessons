@@ -18,13 +18,20 @@ func newEmployee(name, sex string, age, salary int) employee {
 	}
 }
 
-func (e employee) getinfo() string {
-	return fmt.Sprintf("Сотрудник:%s\nВозраст: %d\nЗарплата: %d\n", e.name, e.age, e.salary)
+func (e employee) getSalary(name string) int {
+	if e.name == name {
+		return e.salary
+	} else {
+		return 0
+	}
 }
 func main() {
 	employee1 := newEmployee("Vasya", "W", 40, 1000)
 	employee2 := newEmployee("Zhan", "M", 35, 7000)
 
-	fmt.Printf("%s\n", employee1.getinfo())
-	fmt.Printf("%s\n", employee2.getinfo())
+	//	fmt.Printf("%s\n", employee1.getinfo())
+	//	fmt.Printf("%s\n", employee2.getinfo())
+	fmt.Println(employee1.name, " get ", employee1.getSalary("Vasya"))
+
+	fmt.Printf("%d\n", employee2.getSalary("Zhan"))
 }

@@ -9,8 +9,8 @@ func main() {
 		"купить пиво",
 	}
 	fmt.Printf("Кол-во элементов в списке: %d\n", len(todoList))
-	for index, item := range todoList {
-		fmt.Printf("%d. %s\n", index, item)
+	for _, item := range todoList {
+		fmt.Printf("%s\n", item)
 	}
 
 }
