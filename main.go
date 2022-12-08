@@ -1,4 +1,4 @@
-package main
+package awesomeProject4
 
 import (
 	"errors"
@@ -8,7 +8,14 @@ import (
 const Pi = 3.1415
 
 func main() {
-	printCircleArea(2)
+	var radius int = 5
+	circleArea, err := calculateCircleArea(radius)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	fmt.Printf("площадь круга: %f32 см. кв.\n", circleArea)
+	printCircleArea(-2)
 }
 
 func printCircleArea(radius int) {
