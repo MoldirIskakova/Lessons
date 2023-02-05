@@ -1,11 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	a := 5
-	b := 6
-	c := 8
+	var a int
+	fmt.Println("a manin engiz:")
+	fmt.Scanf("%d\n", &a)
+
+	var b int
+	fmt.Println("b manin engiz:")
+	fmt.Scanf("%d\n", &b)
+
+	var c int
+	fmt.Println("c manin engiz:")
+	fmt.Scanf("%d\n", &c)
 
 	V := a * b * c
 	S := 2 * (a*b + b*c + a*c)
